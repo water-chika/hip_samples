@@ -13,7 +13,7 @@ int main() {
             std::vector<std::weak_ptr<build::file_object>>{build_hpp, build_cpp},
             [](){
                 std::cout << "building" << std::endl;
-                auto command = "c++ build.cpp -o hip_samples_build -std=c++20";
+                auto command = "c++ build.cpp -o hip_samples_build -std=c++20 -ltbb";
                 system(command);
                 std::cout << command << std::endl;
             }
