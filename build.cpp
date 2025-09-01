@@ -66,12 +66,14 @@ int main() {
             );
 
     auto dump_register_cpp = build::file("dump_register.cpp");
+    auto hip_helper_memory_hpp = build::file("hip_helper/memory.hpp");
+    auto hip_helper_register_hpp = build::file("hip_helper/register.hpp");
     auto dump_register = build::file(
             "dump_register",
-            build::dependencies(dump_register_cpp),
+            build::dependencies(dump_register_cpp, hip_helper_memory_hpp, hip_helper_register_hpp),
             [](auto) {
                 std::cout << "building" << std::endl;
-                auto command = "amdclang++ -x hip --offload-arch=gfx1201 dump_register.cpp -o dump_register -std=c++20";
+                auto command = "amdclang++ -g -x hip --offload-arch=gfx1201 dump_register.cpp -o dump_register -std=c++20";
                 auto res = system(command);
                 std::cout << command << std::endl;
                 return res == 0 ? build::update_res::success : build::update_res::failed;
