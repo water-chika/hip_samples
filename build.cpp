@@ -1,4 +1,4 @@
-#include "build/build.hpp"
+#include "libbuild/build.hpp"
 #include <iostream>
 #include <format>
 #include <ranges>
@@ -7,7 +7,7 @@
 int main() {
     auto builder = build::builder{};
 
-    builder.add_executable("hip_samples_build", "build.cpp", "build/build.hpp");
+    builder.add_executable("hip_samples_build", "build.cpp", "libbuild/build.hpp");
     builder.add_hip_executable("load_store", "load_store.cpp");
     builder.add_hip_executable("dump_register", "dump_register.cpp");
 
