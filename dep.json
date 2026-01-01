@@ -1,0 +1,10 @@
+{
+	"build": {
+		"url": "https://github.com/water-chika/build",
+		"commit": "3e305904791eac52c3924bb1e1c074febc898fbc"
+	}
+	"hip_helper": {
+		"url": "https://github.com/water-chika/hip_helper",
+		"commit": "535e1f90f7be5ee9f0ecf1b5a95e06d3fd8a17a6"
+	}
+}
