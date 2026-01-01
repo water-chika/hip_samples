@@ -128,7 +128,7 @@ int main() {
                 else {
                     while (device_call_host_ptr->call_status == 0) {}
                     assert(device_call_host_ptr->call_status == 1);
-                    std::cout << "device call host function: " << std::to_underlying(device_call_host_ptr->function_id) << std::endl;
+                    std::cout << "device call host function: " << uint32_t(device_call_host_ptr->function_id) << std::endl;
                     call_function(device_call_host_ptr);
                     device_call_host_ptr->call_status = 2;
                 }
