@@ -1,6 +1,0 @@
-[submodule "hip_helper"]
-	path = hip_helper
-	url = https://github.com/water-chika/hip_helper
-[submodule "libbuild"]
-	path = libbuild
-	url = https://github.com/water-chika/build
