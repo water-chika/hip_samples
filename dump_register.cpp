@@ -1,7 +1,7 @@
 #include <hip/hip_runtime.h>
 #include "hip_helper/memory.hpp"
 #include "hip_helper/register.hpp"
-#include "hip_helper/hip_helper.hpp"
+#include "hip_helper.hpp"
 
 #include <array>
 #include <iostream>
